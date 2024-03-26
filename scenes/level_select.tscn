@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4r44vyxvpf13"]
+
+[ext_resource type="Texture2D" uid="uid://c44qp02dy1odg" path="res://assets/BHSLevelSelectShot.jpg" id="1_4pnrq"]
+[ext_resource type="Texture2D" uid="uid://dfhl28lv25tkn" path="res://assets/CustomPurple.png" id="2_oxd6i"]
+[ext_resource type="Texture2D" uid="uid://c67waxlpvxl7l" path="res://assets/CustomYellow.png" id="3_1yt7d"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_mf7o1"]
+frames = 2
+frame_0/texture = ExtResource("2_oxd6i")
+frame_0/duration = 0.3
+frame_1/texture = ExtResource("3_1yt7d")
+frame_1/duration = 0.3
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 18.0
+offset_top = 17.0
+offset_right = 26.0
+offset_bottom = 25.0
+
+[node name="BhsLevelSelectShot" type="Sprite2D" parent="."]
+position = Vector2(992, 541)
+scale = Vector2(1.09698, 1.09698)
+texture = ExtResource("1_4pnrq")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 524.0
+offset_top = 540.0
+offset_right = 539.0
+offset_bottom = 555.0
+texture_normal = SubResource("AnimatedTexture_mf7o1")
+texture_hover = ExtResource("2_oxd6i")
