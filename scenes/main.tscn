@@ -1,3 +1,41 @@
-[gd_scene format=3 uid="uid://uc3jtdh5wt0k"]
+[gd_scene load_steps=6 format=3 uid="uid://uc3jtdh5wt0k"]
+
+[ext_resource type="PackedScene" uid="uid://dxmujmahw4bpf" path="res://scenes/dialogue_controller.tscn" id="1_m3aui"]
+[ext_resource type="Texture2D" uid="uid://d206fk4hcle6p" path="res://assets/shape_characters_spritesheet.png" id="2_fbgp7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ks5vg"]
+atlas = ExtResource("2_fbgp7")
+region = Rect2(640, 160, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bb6a0"]
+atlas = ExtResource("2_fbgp7")
+region = Rect2(640, 320, 160, 160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oikd3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ks5vg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bb6a0")
+}],
+"loop": true,
+"name": &"scared",
+"speed": 5.0
+}]
 
 [node name="Main" type="Node"]
+
+[node name="DialogueController" parent="." instance=ExtResource("1_m3aui")]
+dialogue_path = "res://dialogue/test.txt"
+player_name = "Jack"
+
+[node name="Willie" type="AnimatedSprite2D" parent="DialogueController"]
+position = Vector2(211, 577)
+sprite_frames = SubResource("SpriteFrames_oikd3")
