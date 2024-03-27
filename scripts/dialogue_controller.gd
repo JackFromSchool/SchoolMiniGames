@@ -5,6 +5,8 @@ var dialogue_path: String
 @export
 var player_name: String
 
+signal finished
+
 class DialogueLine:
 	var text: String
 	var character_name: String
@@ -17,6 +19,8 @@ var current_character: AnimatedSprite2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$TextStuff.visible = false
+	
 	var file = FileAccess.open(dialogue_path, FileAccess.READ)
 	
 	while not file.eof_reached():
@@ -53,12 +57,17 @@ func _ready():
 					dialogue.text = subline
 					
 					lines.append(dialogue)
+	
+	for key in characters.keys():
+		characters[key].visible = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Input.is_action_just_pressed("ui_accept"):
-		progress()
+		start()
+		if not progress():
+			end()
 
 
 func progress():
@@ -67,13 +76,16 @@ func progress():
 	if current_line >= len(lines):
 		return false
 	
-	$TextBox.text = lines[current_line].text
+	$TextStuff/TextBox.text = lines[current_line].text
 	
 	if lines[current_line].character_name != "Self":
+		if current_character != null:
+			current_character.visible = false
 		current_character = characters[lines[current_line].character_name]
-		$Name.text = lines[current_line].character_name
+		current_character.visible = true
+		$TextStuff/Name.text = lines[current_line].character_name
 	else:
-		$Name.text = player_name
+		$TextStuff/Name.text = player_name
 	
 	if lines[current_line].character_expression != "":
 		current_character.play(lines[current_line].character_expression)
@@ -81,4 +93,10 @@ func progress():
 	return true
 
 func start():
-	pass
+	$TextStuff.visible = true
+
+func end():
+	$TextStuff.visible = false
+	for key in characters.keys():
+		characters[key].visible = false
+	finished.emit()
