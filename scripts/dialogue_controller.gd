@@ -20,6 +20,7 @@ var current_character: AnimatedSprite2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$TextStuff.visible = false
+	characters["Narrator"] = $Narrator
 	
 	var file = FileAccess.open(dialogue_path, FileAccess.READ)
 	
@@ -64,7 +65,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("dialogue_advance"):
 		start()
 		if not progress():
 			end()
@@ -82,6 +83,13 @@ func progress():
 		if current_character != null:
 			current_character.visible = false
 		current_character = characters[lines[current_line].character_name]
+		if current_character == $Narrator:
+			$TextStuff/NameBoxSprite.visible = false
+			$TextStuff/Name.visible = false
+		else:
+			$TextStuff/NameBoxSprite.visible = true
+			$TextStuff/Name.visible = true
+		
 		current_character.visible = true
 		$TextStuff/Name.text = lines[current_line].character_name
 	else:
