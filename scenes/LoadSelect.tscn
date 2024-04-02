@@ -1,0 +1,132 @@
+[gd_scene load_steps=20 format=3 uid="uid://c1kw5hjyhg0b8"]
+
+[ext_resource type="Texture2D" uid="uid://bsxgf44cv4eg0" path="res://assets/yowaimo.png" id="1_0mf42"]
+[ext_resource type="Script" path="res://scenes/LoadSelect.gd" id="1_64tk4"]
+[ext_resource type="Script" path="res://scenes/Button1.gd" id="4_gf1f3"]
+[ext_resource type="Script" path="res://scenes/Button2.gd" id="5_bpgxx"]
+[ext_resource type="Script" path="res://scenes/Button3.gd" id="6_4kgnn"]
+[ext_resource type="Script" path="res://scenes/Button4.gd" id="7_xo4p8"]
+[ext_resource type="Script" path="res://scenes/Button5.gd" id="8_y7tal"]
+[ext_resource type="Script" path="res://scenes/Button6.gd" id="9_k5j1b"]
+[ext_resource type="Texture2D" uid="uid://b04vm3o2tsw0q" path="res://assets/Diamond.png" id="10_x6ql3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ewtoo"]
+atlas = ExtResource("10_x6ql3")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exfni"]
+atlas = ExtResource("10_x6ql3")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ffln"]
+atlas = ExtResource("10_x6ql3")
+region = Rect2(512, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_etwgk"]
+atlas = ExtResource("10_x6ql3")
+region = Rect2(0, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oavcb"]
+atlas = ExtResource("10_x6ql3")
+region = Rect2(256, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ho8g5"]
+atlas = ExtResource("10_x6ql3")
+region = Rect2(512, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8uk0u"]
+atlas = ExtResource("10_x6ql3")
+region = Rect2(0, 512, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lhl5w"]
+atlas = ExtResource("10_x6ql3")
+region = Rect2(256, 512, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c7rxc"]
+atlas = ExtResource("10_x6ql3")
+region = Rect2(512, 512, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_td4fg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ewtoo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exfni")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ffln")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_etwgk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oavcb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ho8g5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8uk0u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lhl5w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c7rxc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_64tk4")
+
+[node name="SchoolwareLoadScreen" type="Sprite2D" parent="."]
+position = Vector2(966, 531)
+scale = Vector2(1.27438, 1.31149)
+texture = ExtResource("1_0mf42")
+
+[node name="Button1" type="AnimatedSprite2D" parent="."]
+position = Vector2(391, 270)
+sprite_frames = SubResource("SpriteFrames_td4fg")
+autoplay = "default"
+script = ExtResource("4_gf1f3")
+
+[node name="Button2" type="AnimatedSprite2D" parent="."]
+position = Vector2(888, 256)
+sprite_frames = SubResource("SpriteFrames_td4fg")
+autoplay = "default"
+script = ExtResource("5_bpgxx")
+
+[node name="Button3" type="AnimatedSprite2D" parent="."]
+position = Vector2(1464, 242)
+sprite_frames = SubResource("SpriteFrames_td4fg")
+autoplay = "default"
+script = ExtResource("6_4kgnn")
+
+[node name="Button4" type="AnimatedSprite2D" parent="."]
+position = Vector2(410, 777)
+sprite_frames = SubResource("SpriteFrames_td4fg")
+autoplay = "default"
+script = ExtResource("7_xo4p8")
+
+[node name="Button5" type="AnimatedSprite2D" parent="."]
+position = Vector2(902, 737)
+sprite_frames = SubResource("SpriteFrames_td4fg")
+autoplay = "default"
+script = ExtResource("8_y7tal")
+
+[node name="Button6" type="AnimatedSprite2D" parent="."]
+position = Vector2(1470, 761)
+sprite_frames = SubResource("SpriteFrames_td4fg")
+autoplay = "default"
+script = ExtResource("9_k5j1b")
