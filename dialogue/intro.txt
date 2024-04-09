@@ -1,0 +1,18 @@
+[characters]
+Smith
+[end]
+
+[dialogue]
+Narrator:In this world, their are few schools greater than BHS.
+Narrator:After years of introspection, dedicated training, and pure passion for the scholastic pursuit, Bridgeland stands now above all else.
+Narrator:Our faculty is unmatched in its pure intellectual strength. Our administration is above all in the land. We are simply the best of the best.
+Smith:And I am honored to be the president of this fine establishment.
+Smith:However our school has not gone without its fair share of troubles...
+Smith:Recently our poor school was attacked by a group of scoundrels from... Cy-Ranch...
+Smith:I know even saying that name brings me pain...
+Smith:See Cy-Ranch has used an experimental new bioweapon called a Personality Shifter.
+Smith:This shifter has caused the personalities of teachers to completely warp! So much so, they have no memory of their lives before now.
+Smith:However, our team of scientists that survived the attack have come up with a way to nullify the effects of the Personality Shifter, but we'll need your help to do it.
+Smith:You must go to each of our core teachers and students and show them their old ways. In doing so it will cause them to shift back into their original personality.
+Smith:The continued relevance of BHS relies on you %name%!
+[end]

@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://cr4rggq41pn2v"]
+
+[ext_resource type="Script" path="res://scripts/intro.gd" id="1_afoo1"]
+[ext_resource type="PackedScene" uid="uid://dxmujmahw4bpf" path="res://scenes/dialogue_controller.tscn" id="1_qi600"]
+[ext_resource type="Texture2D" uid="uid://bkunbc2m1bruy" path="res://assets/mr_smith_portrait.png" id="2_trccb"]
+[ext_resource type="Texture2D" uid="uid://bcp6bp7mnqop1" path="res://assets/intro_bg.png" id="3_dyckg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n60en"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_trccb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Intro" type="Node2D"]
+script = ExtResource("1_afoo1")
+
+[node name="DialogueController" parent="." instance=ExtResource("1_qi600")]
+dialogue_path = "res://dialogue/intro.txt"
+player_name = "Jack"
+
+[node name="Smith" type="AnimatedSprite2D" parent="DialogueController"]
+z_index = -1
+position = Vector2(974, 441)
+scale = Vector2(1.50442, 1.50442)
+sprite_frames = SubResource("SpriteFrames_n60en")
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(959, 510)
+scale = Vector2(2.41875, 2.41875)
+texture = ExtResource("3_dyckg")
+
+[connection signal="finished" from="DialogueController" to="." method="_on_dialogue_controller_finished"]
