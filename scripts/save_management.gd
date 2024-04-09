@@ -1,54 +1,54 @@
 extends Node
-const FileFormat = "res://saves/game_data_{Number}.json"
+const file_format = "res://saves/game_data_{Number}.json"
 
-var PlayerName
+var player_name
 
-var CharacterDict = [];
+var character_dict = [];
 
-@export var CharacterList = [
+@export var character_list = [
 	"CharTestNode",
 ]
 
 func _ready():
 	pass
 	
-func CreateSaveData(FileNumber):
+func save_game(file_number):
 	
-	var SaveGame = FileAccess.open(FileFormat.format({"Number" : FileNumber}), FileAccess.WRITE)
+	var save_game = FileAccess.open(file_format.format({"Number" : file_number}), FileAccess.WRITE)
 	var save_dict = {}
 	
-	save_dict["Name"] = PlayerName
+	save_dict["Name"] = player_name
 	
-	for CharName in CharacterList:
-		var CharDict = {
-			"MetCharacter" : !get_parent().get_node(CharName).MetCharacter,
-			"Encounters" : get_parent().get_node(CharName).Encounters
+	for char_name in character_list:
+		var char_dict = {
+			"MetCharacter" : !get_parent().get_node(char_name).MetCharacter,
+			"Encounters" : get_parent().get_node(char_name).Encounters
 		}
-		save_dict[CharName] = CharDict
+		save_dict[char_name] = char_dict
 	
 	var JsonString = JSON.stringify(save_dict)
-	SaveGame.store_line(JsonString)
+	save_game.store_line(JsonString)
 	
 	return
 
-func LoadGame(FileNumber):
+func load_game(file_number):
 	
-	var FileLocation = FileFormat.format({"Number" : FileNumber})
+	var file_location = file_format.format({"Number" : file_number})
 	
-	if not FileAccess.file_exists(FileLocation):
+	if not FileAccess.file_exists(file_location):
 		return false # Error! No save file found here.
 	
-	var SaveState = FileAccess.open(FileLocation, FileAccess.READ)
+	var SaveState = FileAccess.open(file_location, FileAccess.READ)
 	var JsonObject = JSON.new()
 	JsonObject.parse(SaveState.get_as_text())
 	return LoadValues(JsonObject.get_data())
 	
-func LoadValues(GameState):
-	if not GameState["Name"] == null:
-		PlayerName = GameState["Name"]
+func LoadValues(game_state):
+	if not game_state["Name"] == null:
+		player_name = game_state["Name"]
 		
-	for CharName in CharacterList:
-		if not get_parent().get_node(CharName) == null:
-			get_parent().get_node(CharName).Load(GameState[CharName])
+	for char_name in character_list:
+		if not get_parent().get_node(char_name) == null:
+			get_parent().get_node(char_name).load_state(game_state[char_name])
 
 	return true

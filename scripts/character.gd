@@ -1,21 +1,21 @@
 extends Node
 class_name Character
 
-@export var Games: Array[PackedScene]
+@export var games: Array[PackedScene]
 
-var Encounters = []
+var encounters = []
 
-var MetCharacter = false
+var met_character = false
 
 signal gameover(win: bool)
 
 func on_start():
-	Encounters.resize(Games.size())
-	Encounters.fill(0)
+	encounters.resize(games.size())
+	encounters.fill(0)
  
-func Load(State):
-	if not State["Encounters"] == null:
-		Encounters = State["Encounters"]
+func load_state(state):
+	if not state["Encounters"] == null:
+		encounters = state["Encounters"]
 
-	if not State["MetCharacter"] == null:
-		MetCharacter = State["MetCharacter"]
+	if not state["MetCharacter"] == null:
+		met_character = state["MetCharacter"]

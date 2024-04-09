@@ -4,4 +4,3 @@
 
 [node name="Node" type="Node"]
 script = ExtResource("1_ddfqa")
-CharacterList = [null, null, null, null]

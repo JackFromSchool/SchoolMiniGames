@@ -2,12 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://bsxgf44cv4eg0" path="res://assets/yowaimo.png" id="1_0mf42"]
 [ext_resource type="Script" path="res://scenes/LoadSelect.gd" id="1_64tk4"]
-[ext_resource type="Script" path="res://scenes/Button1.gd" id="4_gf1f3"]
-[ext_resource type="Script" path="res://scenes/Button2.gd" id="5_bpgxx"]
-[ext_resource type="Script" path="res://scenes/Button3.gd" id="6_4kgnn"]
-[ext_resource type="Script" path="res://scenes/Button4.gd" id="7_xo4p8"]
-[ext_resource type="Script" path="res://scenes/Button5.gd" id="8_y7tal"]
-[ext_resource type="Script" path="res://scenes/Button6.gd" id="9_k5j1b"]
 [ext_resource type="Texture2D" uid="uid://b04vm3o2tsw0q" path="res://assets/Diamond.png" id="10_x6ql3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ewtoo"]
@@ -81,6 +75,48 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="GDScript" id="GDScript_q7xad"]
+script/source = "extends AnimatedSprite2D
+
+
+SaveSystem.LoadGame(1)
+"
+
+[sub_resource type="GDScript" id="GDScript_gd1nt"]
+script/source = "extends AnimatedSprite2D
+
+
+SaveSystem.LoadGame(2)
+"
+
+[sub_resource type="GDScript" id="GDScript_lffe4"]
+script/source = "extends AnimatedSprite2D
+
+
+SaveSystem.LoadGame(3)
+"
+
+[sub_resource type="GDScript" id="GDScript_yrncr"]
+script/source = "extends AnimatedSprite2D
+
+
+SaveSystem.LoadGame(4)
+"
+
+[sub_resource type="GDScript" id="GDScript_sgrbs"]
+script/source = "extends AnimatedSprite2D
+
+
+SaveSystem.LoadGame(5)
+"
+
+[sub_resource type="GDScript" id="GDScript_k3x4c"]
+script/source = "extends AnimatedSprite2D
+
+
+SaveSystem.LoadGame(6)
+"
+
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -99,34 +135,34 @@ texture = ExtResource("1_0mf42")
 position = Vector2(391, 270)
 sprite_frames = SubResource("SpriteFrames_td4fg")
 autoplay = "default"
-script = ExtResource("4_gf1f3")
+script = SubResource("GDScript_q7xad")
 
 [node name="Button2" type="AnimatedSprite2D" parent="."]
 position = Vector2(888, 256)
 sprite_frames = SubResource("SpriteFrames_td4fg")
 autoplay = "default"
-script = ExtResource("5_bpgxx")
+script = SubResource("GDScript_gd1nt")
 
 [node name="Button3" type="AnimatedSprite2D" parent="."]
 position = Vector2(1464, 242)
 sprite_frames = SubResource("SpriteFrames_td4fg")
 autoplay = "default"
-script = ExtResource("6_4kgnn")
+script = SubResource("GDScript_lffe4")
 
 [node name="Button4" type="AnimatedSprite2D" parent="."]
 position = Vector2(410, 777)
 sprite_frames = SubResource("SpriteFrames_td4fg")
 autoplay = "default"
-script = ExtResource("7_xo4p8")
+script = SubResource("GDScript_yrncr")
 
 [node name="Button5" type="AnimatedSprite2D" parent="."]
 position = Vector2(902, 737)
 sprite_frames = SubResource("SpriteFrames_td4fg")
 autoplay = "default"
-script = ExtResource("8_y7tal")
+script = SubResource("GDScript_sgrbs")
 
 [node name="Button6" type="AnimatedSprite2D" parent="."]
 position = Vector2(1470, 761)
 sprite_frames = SubResource("SpriteFrames_td4fg")
 autoplay = "default"
-script = ExtResource("9_k5j1b")
+script = SubResource("GDScript_k3x4c")
