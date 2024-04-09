@@ -5,9 +5,7 @@ var player_name
 
 var character_dict = [];
 
-@export var character_list = [
-	"CharTestNode",
-]
+@export var character_list = []
 
 func _ready():
 	pass
