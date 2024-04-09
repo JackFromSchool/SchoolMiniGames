@@ -1,7 +1,7 @@
 extends Node
-const FileFormat = "res://saves/game-data{Number}.json"
+const FileFormat = "res://saves/game_data_{Number}.json"
 
-var PlayerName = "Player"
+var PlayerName
 
 var CharacterDict = [];
 
