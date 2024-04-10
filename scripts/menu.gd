@@ -17,7 +17,7 @@ func _on_text_start_pressed():
 
 
 func _on_text_load_pressed():
-	get_tree().change_scene_to_file("res://scenes/LoadSelect.tscn")
+	get_tree().change_scene_to_file("res://scenes/load_selector.tscn")
 
 
 func _on_text_quit_pressed():
