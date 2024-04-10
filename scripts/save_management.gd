@@ -1,7 +1,7 @@
 extends Node
 const file_format = "res://saves/game_data_{Number}.json"
 
-var player_name
+var player_name = "fdsfa"
 
 var character_dict = [];
 

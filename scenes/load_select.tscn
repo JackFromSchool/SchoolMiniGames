@@ -1,43 +1,43 @@
 [gd_scene load_steps=14 format=3 uid="uid://c1kw5hjyhg0b8"]
 
-[ext_resource type="Script" path="res://scripts/load_select.gd" id="1_bejup"]
-[ext_resource type="Texture2D" uid="uid://bsxgf44cv4eg0" path="res://assets/yowaimo.png" id="2_iftt5"]
-[ext_resource type="Texture2D" uid="uid://b04vm3o2tsw0q" path="res://assets/Diamond.png" id="3_xji5k"]
+[ext_resource type="Script" path="res://scripts/load_select.gd" id="1_chm4q"]
+[ext_resource type="Texture2D" uid="uid://bsxgf44cv4eg0" path="res://assets/yowaimo.png" id="2_nfko2"]
+[ext_resource type="Texture2D" uid="uid://b04vm3o2tsw0q" path="res://assets/Diamond.png" id="3_8d0aj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ewtoo"]
-atlas = ExtResource("3_xji5k")
+atlas = ExtResource("3_8d0aj")
 region = Rect2(0, 0, 256, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_exfni"]
-atlas = ExtResource("3_xji5k")
+atlas = ExtResource("3_8d0aj")
 region = Rect2(256, 0, 256, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5ffln"]
-atlas = ExtResource("3_xji5k")
+atlas = ExtResource("3_8d0aj")
 region = Rect2(512, 0, 256, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_etwgk"]
-atlas = ExtResource("3_xji5k")
+atlas = ExtResource("3_8d0aj")
 region = Rect2(0, 256, 256, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oavcb"]
-atlas = ExtResource("3_xji5k")
+atlas = ExtResource("3_8d0aj")
 region = Rect2(256, 256, 256, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ho8g5"]
-atlas = ExtResource("3_xji5k")
+atlas = ExtResource("3_8d0aj")
 region = Rect2(512, 256, 256, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8uk0u"]
-atlas = ExtResource("3_xji5k")
+atlas = ExtResource("3_8d0aj")
 region = Rect2(0, 512, 256, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lhl5w"]
-atlas = ExtResource("3_xji5k")
+atlas = ExtResource("3_8d0aj")
 region = Rect2(256, 512, 256, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c7rxc"]
-atlas = ExtResource("3_xji5k")
+atlas = ExtResource("3_8d0aj")
 region = Rect2(512, 512, 256, 256)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_td4fg"]
@@ -82,12 +82,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_bejup")
+script = ExtResource("1_chm4q")
 
 [node name="SchoolwareLoadScreen" type="Sprite2D" parent="."]
 position = Vector2(966, 531)
 scale = Vector2(1.27438, 1.31149)
-texture = ExtResource("2_iftt5")
+texture = ExtResource("2_nfko2")
 
 [node name="Node" type="Node" parent="."]
 
