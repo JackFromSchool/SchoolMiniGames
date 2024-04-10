@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwi8m06hnaad7"]
+
+[ext_resource type="Script" path="res://scripts/watson_and_garcia/watson_and_garcia.gd" id="1_1bg8c"]
+
+[node name="WatsonAndGarcia" type="Node"]
+script = ExtResource("1_1bg8c")

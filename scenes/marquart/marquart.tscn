@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://rfc002x5y8th"]
+
+[ext_resource type="Script" path="res://scripts/marquart/marquart.gd" id="1_ymra5"]
+
+[node name="Marquart" type="Node"]
+script = ExtResource("1_ymra5")
