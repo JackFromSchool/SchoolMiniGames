@@ -37,6 +37,7 @@ shortcut_keys_enabled = false
 
 [node name="Name" type="Label" parent="TextStuff"]
 z_index = 1
+layout_mode = 0
 offset_left = 218.0
 offset_top = 686.0
 offset_right = 452.0

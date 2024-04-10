@@ -1,7 +1,7 @@
 extends Node
 const file_format = "res://saves/game_data_{Number}.json"
 
-var player_name = "fdsfa"
+var player_name = "Player"
 
 var character_dict = [];
 
@@ -10,7 +10,15 @@ var character_dict = [];
 func _ready():
 	pass
 	
-func save_game(file_number):
+func check_file(file_number: int):
+	var file_location = file_format.format({"Number" : file_number})
+	
+	if FileAccess.file_exists(file_location):
+		return true
+
+	return false
+
+func save_game(file_number: int):
 	
 	var save_game = FileAccess.open(file_format.format({"Number" : file_number}), FileAccess.WRITE)
 	var save_dict = {}
@@ -29,7 +37,7 @@ func save_game(file_number):
 	
 	return
 
-func load_game(file_number):
+func load_game(file_number: int):
 	
 	var file_location = file_format.format({"Number" : file_number})
 	
@@ -39,9 +47,9 @@ func load_game(file_number):
 	var SaveState = FileAccess.open(file_location, FileAccess.READ)
 	var JsonObject = JSON.new()
 	JsonObject.parse(SaveState.get_as_text())
-	return LoadValues(JsonObject.get_data())
+	return load_values(JsonObject.get_data())
 	
-func LoadValues(game_state):
+func load_values(game_state):
 	if not game_state["Name"] == null:
 		player_name = game_state["Name"]
 		
