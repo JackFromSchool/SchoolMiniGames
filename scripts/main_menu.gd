@@ -11,7 +11,7 @@ func _process(delta):
 	pass
 
 func _on_text_start_pressed():
-	get_parent().get_node("SaveSystem").save_game(0)
+	pass
 
 func _on_text_load_pressed():
 	move_to_load_select.emit()
