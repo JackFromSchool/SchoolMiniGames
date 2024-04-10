@@ -1,7 +1,7 @@
 extends Node2D
 
-signal done
+signal intro_over
 
 func _on_dialogue_controller_finished():
-	done.emit()
+	intro_over.emit()
 	queue_free()
