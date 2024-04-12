@@ -1,0 +1,85 @@
+[gd_scene load_steps=9 format=3 uid="uid://dmtk4vbkjnrrr"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_65acd"]
+[ext_resource type="Texture2D" uid="uid://d1biueh4o8ytv" path="res://assets/Schoolware main menu.png" id="1_pnulb"]
+[ext_resource type="Texture2D" uid="uid://c4lasm4xmm8g4" path="res://assets/Default.png" id="4_vxktw"]
+[ext_resource type="Texture2D" uid="uid://usu1dae522e8" path="res://assets/Pressed.png" id="5_j86wo"]
+[ext_resource type="Texture2D" uid="uid://cxvbm27a1ip2f" path="res://assets/New.png" id="6_nuq0d"]
+[ext_resource type="Texture2D" uid="uid://b05re6on1ds2j" path="res://assets/Hovering.png" id="6_xqtrh"]
+[ext_resource type="Texture2D" uid="uid://bitbtg1uup4mk" path="res://assets/Load.png" id="8_onydw"]
+[ext_resource type="Texture2D" uid="uid://vo4atx6vm0sy" path="res://assets/Quit.png" id="9_2l1gy"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_65acd")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(47.96, 27.04)
+texture = ExtResource("1_pnulb")
+expand_mode = 1
+
+[node name="TextNew" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 636.0
+offset_right = 324.0
+offset_bottom = 892.0
+scale = Vector2(1.65871, 1.5192)
+texture_normal = ExtResource("4_vxktw")
+texture_pressed = ExtResource("5_j86wo")
+texture_hover = ExtResource("6_xqtrh")
+
+[node name="TextureRect" type="TextureRect" parent="TextNew"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("6_nuq0d")
+stretch_mode = 2
+
+[node name="TextLoad" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 706.0
+offset_top = 630.0
+offset_right = 962.0
+offset_bottom = 886.0
+scale = Vector2(1.65871, 1.5192)
+texture_normal = ExtResource("4_vxktw")
+texture_pressed = ExtResource("5_j86wo")
+texture_hover = ExtResource("6_xqtrh")
+
+[node name="TextureRect" type="TextureRect" parent="TextLoad"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("8_onydw")
+stretch_mode = 2
+
+[node name="TextQuit" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1334.0
+offset_top = 622.0
+offset_right = 1590.0
+offset_bottom = 878.0
+scale = Vector2(1.65871, 1.5192)
+texture_normal = ExtResource("4_vxktw")
+texture_pressed = ExtResource("5_j86wo")
+texture_hover = ExtResource("6_xqtrh")
+
+[node name="TextureRect" type="TextureRect" parent="TextQuit"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("9_2l1gy")
+stretch_mode = 2
+
+[connection signal="pressed" from="TextNew" to="." method="_on_text_start_pressed"]
+[connection signal="pressed" from="TextLoad" to="." method="_on_text_load_pressed"]
+[connection signal="pressed" from="TextQuit" to="." method="_on_text_quit_pressed"]
