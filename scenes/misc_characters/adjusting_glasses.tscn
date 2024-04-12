@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://vhwdhro21y2l"]
+
+[ext_resource type="Script" path="res://scripts/misc_characters/adjusting_glasses.gd" id="1_b4nv8"]
+
+[node name="AdjustingGlasses" type="Node"]
+script = ExtResource("1_b4nv8")
