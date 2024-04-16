@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://c1kw5hjyhg0b8"]
 
 [ext_resource type="Script" path="res://scripts/load_select.gd" id="1_chm4q"]
-[ext_resource type="Texture2D" uid="uid://bsxgf44cv4eg0" path="res://assets/yowaimo.png" id="2_nfko2"]
+[ext_resource type="Texture2D" uid="uid://bl683wytdgvp" path="res://assets/BlurryBHS.png" id="2_haaig"]
 [ext_resource type="Texture2D" uid="uid://b04vm3o2tsw0q" path="res://assets/Diamond.png" id="3_8d0aj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ewtoo"]
@@ -87,7 +87,7 @@ script = ExtResource("1_chm4q")
 [node name="SchoolwareLoadScreen" type="Sprite2D" parent="."]
 position = Vector2(966, 531)
 scale = Vector2(1.27438, 1.31149)
-texture = ExtResource("2_nfko2")
+texture = ExtResource("2_haaig")
 
 [node name="Node" type="Node" parent="."]
 
