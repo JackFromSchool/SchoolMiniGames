@@ -1,9 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://uc3jtdh5wt0k"]
+[gd_scene load_steps=7 format=3 uid="uid://uc3jtdh5wt0k"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_hg13q"]
 [ext_resource type="PackedScene" uid="uid://bwkb853l53gdu" path="res://scenes/save_system.tscn" id="2_jtd0q"]
+[ext_resource type="PackedScene" uid="uid://rfc002x5y8th" path="res://scenes/marquart/marquart.tscn" id="3_nspem"]
+[ext_resource type="PackedScene" uid="uid://d0puqb5rvfdos" path="res://scenes/misc_characters/misc_characters.tscn" id="4_50qlp"]
+[ext_resource type="PackedScene" uid="uid://dwi8m06hnaad7" path="res://scenes/watson_and_garcia/watson_and_garcia.tscn" id="5_achm3"]
+[ext_resource type="PackedScene" uid="uid://dhs4dbx6b2gfo" path="res://scenes/willie/willie.tscn" id="6_yb0n2"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_hg13q")
 
 [node name="SaveSystem" parent="." instance=ExtResource("2_jtd0q")]
+
+[node name="Marquart" parent="." instance=ExtResource("3_nspem")]
+
+[node name="MiscCharacters" parent="." instance=ExtResource("4_50qlp")]
+
+[node name="WatsonAndGarcia" parent="." instance=ExtResource("5_achm3")]
+
+[node name="Willie" parent="." instance=ExtResource("6_yb0n2")]

@@ -5,3 +5,6 @@
 [node name="Willie" type="Node"]
 
 [node name="Character" parent="." instance=ExtResource("1_yak0a")]
+gamesToBoss = 12
+speedIncrement = 0.1
+gamesToSpeedUp = 3
