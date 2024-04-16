@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://dwi8m06hnaad7"]
 
-[ext_resource type="Script" path="res://scripts/watson_and_garcia/watson_and_garcia.gd" id="1_1bg8c"]
+[ext_resource type="PackedScene" uid="uid://tfndj5ry4teq" path="res://scenes/character.tscn" id="1_dq7hu"]
 
 [node name="WatsonAndGarcia" type="Node"]
-script = ExtResource("1_1bg8c")
+
+[node name="Character" parent="." instance=ExtResource("1_dq7hu")]

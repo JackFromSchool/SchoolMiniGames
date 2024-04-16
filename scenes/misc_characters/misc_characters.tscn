@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://d0puqb5rvfdos"]
 
-[ext_resource type="Script" path="res://scripts/misc_characters/misc_characters.gd" id="1_oktwu"]
+[ext_resource type="PackedScene" uid="uid://tfndj5ry4teq" path="res://scenes/character.tscn" id="1_ft53s"]
 
 [node name="MiscCharacters" type="Node"]
-script = ExtResource("1_oktwu")
+
+[node name="Character" parent="." instance=ExtResource("1_ft53s")]

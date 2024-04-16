@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://gfrpynb3ibig"]
-
-[ext_resource type="Script" path="res://scripts/character.gd" id="1_5l1de"]
-
-[node name="CharTestNode" type="Node"]
-script = ExtResource("1_5l1de")
