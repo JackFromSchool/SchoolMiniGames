@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bl6fg6df7xi2j"
-path="res://.godot/imported/YCircle.png-1e3e6328bafccd45a95a6db4accbd3e7.ctex"
+uid="uid://d0avc6uyitgvj"
+path="res://.godot/imported/CustomYellow.png-1d7fb54d1a8960a3a8d67fa3739b67e3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/YCircle.png"
-dest_files=["res://.godot/imported/YCircle.png-1e3e6328bafccd45a95a6db4accbd3e7.ctex"]
+source_file="res://scenes/CustomYellow.png"
+dest_files=["res://.godot/imported/CustomYellow.png-1d7fb54d1a8960a3a8d67fa3739b67e3.ctex"]
 
 [params]
 

@@ -1,25 +1,23 @@
-[gd_scene load_steps=11 format=3 uid="uid://b4r44vyxvpf13"]
+[gd_scene load_steps=9 format=3 uid="uid://b4r44vyxvpf13"]
 
-[ext_resource type="Texture2D" uid="uid://c44qp02dy1odg" path="res://assets/BHSLevelSelectShot.jpg" id="1_4pnrq"]
 [ext_resource type="Script" path="res://scenes/level_select.gd" id="1_mqkmf"]
-[ext_resource type="Texture2D" uid="uid://dfhl28lv25tkn" path="res://assets/CustomPurple.png" id="2_oxd6i"]
 [ext_resource type="VideoStream" path="res://assets/ResolutionLvl.ogv" id="2_smhcd"]
-[ext_resource type="Texture2D" uid="uid://c67waxlpvxl7l" path="res://assets/CustomYellow.png" id="3_1yt7d"]
-[ext_resource type="Script" path="res://scenes/bhs_level_select.gd" id="3_ycrp6"]
+[ext_resource type="Texture2D" uid="uid://21beokps8c56" path="res://assets/PurpleCircle.png" id="3_fpnnx"]
+[ext_resource type="Texture2D" uid="uid://ppqb74fv2i1v" path="res://assets/YellowCircle.png" id="4_yxe22"]
 [ext_resource type="Texture2D" uid="uid://dp4itimcww36q" path="res://assets/Veenstra.png" id="5_57pen"]
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_mf7o1"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_as3g4"]
 frames = 2
-frame_0/texture = ExtResource("2_oxd6i")
+frame_0/texture = ExtResource("3_fpnnx")
 frame_0/duration = 0.3
-frame_1/texture = ExtResource("3_1yt7d")
+frame_1/texture = ExtResource("4_yxe22")
 frame_1/duration = 0.3
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_jhn5u"]
 frames = 2
-frame_0/texture = ExtResource("2_oxd6i")
+frame_0/texture = ExtResource("3_fpnnx")
 frame_0/duration = 0.01
-frame_1/texture = ExtResource("3_1yt7d")
+frame_1/texture = ExtResource("4_yxe22")
 frame_1/duration = 0.01
 
 [sub_resource type="Curve2D" id="Curve2D_ppwh7"]
@@ -44,13 +42,6 @@ offset_bottom = 40.0
 stream = ExtResource("2_smhcd")
 autoplay = true
 loop = true
-script = ExtResource("3_ycrp6")
-
-[node name="level_select" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(944, 543)
-scale = Vector2(1.08662, 1.08662)
-texture = ExtResource("1_4pnrq")
 
 [node name="ToCalculus" type="TextureButton" parent="."]
 layout_mode = 0
@@ -58,36 +49,36 @@ offset_left = 23.0
 offset_top = 422.0
 offset_right = 38.0
 offset_bottom = 437.0
-texture_normal = SubResource("AnimatedTexture_mf7o1")
+texture_normal = SubResource("AnimatedTexture_as3g4")
 texture_pressed = SubResource("AnimatedTexture_jhn5u")
-texture_hover = ExtResource("2_oxd6i")
+texture_hover = ExtResource("3_fpnnx")
 
 [node name="ToStudent" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 815.0
-offset_top = 632.0
-offset_right = 830.0
-offset_bottom = 647.0
-texture_normal = SubResource("AnimatedTexture_mf7o1")
-texture_hover = ExtResource("2_oxd6i")
+offset_left = 777.0
+offset_top = 674.0
+offset_right = 802.0
+offset_bottom = 699.0
+texture_normal = SubResource("AnimatedTexture_as3g4")
+texture_pressed = SubResource("AnimatedTexture_jhn5u")
+texture_hover = ExtResource("3_fpnnx")
 
 [node name="ToCompSci" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 600.0
-offset_top = 576.0
-offset_right = 615.0
-offset_bottom = 591.0
-texture_normal = SubResource("AnimatedTexture_mf7o1")
-texture_hover = ExtResource("2_oxd6i")
+offset_left = 1273.0
+offset_top = 564.0
+offset_right = 1298.0
+offset_bottom = 589.0
+texture_normal = SubResource("AnimatedTexture_as3g4")
+texture_pressed = SubResource("AnimatedTexture_jhn5u")
+texture_hover = ExtResource("3_fpnnx")
 
 [node name="ToMusic" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 1636.0
-offset_top = 622.0
-offset_right = 1651.0
-offset_bottom = 637.0
-texture_normal = SubResource("AnimatedTexture_mf7o1")
-texture_hover = ExtResource("2_oxd6i")
+offset_left = 1637.0
+offset_top = 621.0
+offset_right = 1662.0
+offset_bottom = 646.0
+texture_normal = SubResource("AnimatedTexture_as3g4")
+texture_pressed = SubResource("AnimatedTexture_jhn5u")
+texture_hover = ExtResource("3_fpnnx")
 
 [node name="Path2D" type="Path2D" parent="."]
 visible = false
@@ -109,6 +100,6 @@ position = Vector2(3344, 594)
 rotation = -3.13329
 
 [connection signal="pressed" from="ToCalculus" to="." method="_on_to_calculus_pressed"]
-[connection signal="pressed" from="ToStudent" to="." method="_on_to_student_pressed"]
-[connection signal="pressed" from="ToCompSci" to="." method="_on_to_comp_sci_pressed"]
-[connection signal="pressed" from="ToMusic" to="." method="_on_to_music_pressed"]
+[connection signal="pressed" from="ToStudent" to="." method="_on_to_calculus_pressed"]
+[connection signal="pressed" from="ToCompSci" to="." method="_on_to_calculus_pressed"]
+[connection signal="pressed" from="ToMusic" to="." method="_on_to_calculus_pressed"]
