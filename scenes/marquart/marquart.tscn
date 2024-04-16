@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://rfc002x5y8th"]
 
-[ext_resource type="Script" path="res://scripts/marquart/marquart.gd" id="1_ymra5"]
+[ext_resource type="PackedScene" uid="uid://tfndj5ry4teq" path="res://scenes/character.tscn" id="1_136iv"]
 
 [node name="Marquart" type="Node"]
-script = ExtResource("1_ymra5")
+
+[node name="Character" parent="." instance=ExtResource("1_136iv")]
