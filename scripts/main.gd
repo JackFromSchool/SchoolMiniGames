@@ -30,6 +30,10 @@ func _on_save_loaded():
 	
 	var level_select_i = level_select.instantiate()
 	level_select_i.name = "LevelSelect"
+	level_select_i.marquart_start.connect(_on_marquart_start)
+	level_select_i.watson_and_garcia_start.connect(_on_watson_and_garcia_start)
+	level_select_i.misc_characters_start.connect(_on_misc_characters_start)
+	level_select_i.willie_start.connect(_on_willie_start)
 	add_child(level_select_i)
 
 func _on_intro_over():
@@ -37,6 +41,10 @@ func _on_intro_over():
 	
 	var level_select_i = level_select.instantiate()
 	level_select_i.name = "LevelSelect"
+	level_select_i.marquart_start.connect(_on_marquart_start)
+	level_select_i.watson_and_garcia_start.connect(_on_watson_and_garcia_start)
+	level_select_i.misc_characters_start.connect(_on_misc_characters_start)
+	level_select_i.willie_start.connect(_on_willie_start)
 	add_child(level_select_i)
 
 func _on_new_game():
@@ -47,3 +55,18 @@ func _on_new_game():
 	intro_i.intro_over.connect(_on_intro_over)
 	add_child(intro_i)
 
+func _on_marquart_start():
+	get_node("LevelSelect").queue_free()
+	$Marquart/Character.start()
+
+func _on_watson_and_garcia_start():
+	get_node("LevelSelect").queue_free()
+	$WatsonAndGarcia/Character.start()
+
+func _on_misc_characters_start():
+	get_node("LevelSelect").queue_free()
+	$MiscCharacters/Character.start()
+
+func _on_willie_start():
+	get_node("LevelSelect").queue_free()
+	$Willie/Character.start()
