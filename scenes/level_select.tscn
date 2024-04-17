@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://b4r44vyxvpf13"]
+[gd_scene load_steps=10 format=3 uid="uid://b4r44vyxvpf13"]
 
 [ext_resource type="Script" path="res://scripts/level_select.gd" id="1_5nrel"]
 [ext_resource type="VideoStream" path="res://assets/ResolutionLvl.ogv" id="2_smhcd"]
 [ext_resource type="Texture2D" uid="uid://21beokps8c56" path="res://assets/ui_sprites/PurpleCircle.png" id="3_fpnnx"]
 [ext_resource type="Texture2D" uid="uid://ppqb74fv2i1v" path="res://assets/ui_sprites/YellowCircle.png" id="4_yxe22"]
 [ext_resource type="Texture2D" uid="uid://dp4itimcww36q" path="res://assets/portraits/Veenstra.png" id="5_57pen"]
+[ext_resource type="AudioStream" uid="uid://701o8kxlq0sf" path="res://assets/MainMenuMusic.wav" id="6_fquaw"]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_as3g4"]
 frames = 2
@@ -101,6 +102,9 @@ texture = ExtResource("5_57pen")
 [node name="GarciaWatson" type="PathFollow2D" parent="Path2D"]
 position = Vector2(3344, 594)
 rotation = -3.13329
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_fquaw")
 
 [connection signal="pressed" from="ToCalculus" to="." method="_on_to_calculus_pressed"]
 [connection signal="pressed" from="ToStudent" to="." method="_on_to_calculus_pressed"]
