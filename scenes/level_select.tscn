@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://b4r44vyxvpf13"]
 
-[ext_resource type="Script" path="res://scenes/level_select.gd" id="1_mqkmf"]
+[ext_resource type="Script" path="res://scripts/level_select.gd" id="1_5nrel"]
 [ext_resource type="VideoStream" path="res://assets/ResolutionLvl.ogv" id="2_smhcd"]
-[ext_resource type="Texture2D" uid="uid://21beokps8c56" path="res://assets/PurpleCircle.png" id="3_fpnnx"]
-[ext_resource type="Texture2D" uid="uid://ppqb74fv2i1v" path="res://assets/YellowCircle.png" id="4_yxe22"]
-[ext_resource type="Texture2D" uid="uid://dp4itimcww36q" path="res://assets/Veenstra.png" id="5_57pen"]
+[ext_resource type="Texture2D" uid="uid://21beokps8c56" path="res://assets/ui_sprites/PurpleCircle.png" id="3_fpnnx"]
+[ext_resource type="Texture2D" uid="uid://ppqb74fv2i1v" path="res://assets/ui_sprites/YellowCircle.png" id="4_yxe22"]
+[ext_resource type="Texture2D" uid="uid://dp4itimcww36q" path="res://assets/portraits/Veenstra.png" id="5_57pen"]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_as3g4"]
 frames = 2
@@ -33,7 +33,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_mqkmf")
+script = ExtResource("1_5nrel")
 
 [node name="bhs_level_select" type="VideoStreamPlayer" parent="."]
 layout_mode = 0
@@ -54,6 +54,7 @@ texture_pressed = SubResource("AnimatedTexture_jhn5u")
 texture_hover = ExtResource("3_fpnnx")
 
 [node name="ToStudent" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 777.0
 offset_top = 674.0
 offset_right = 802.0
@@ -63,6 +64,7 @@ texture_pressed = SubResource("AnimatedTexture_jhn5u")
 texture_hover = ExtResource("3_fpnnx")
 
 [node name="ToCompSci" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 1273.0
 offset_top = 564.0
 offset_right = 1298.0
@@ -72,6 +74,7 @@ texture_pressed = SubResource("AnimatedTexture_jhn5u")
 texture_hover = ExtResource("3_fpnnx")
 
 [node name="ToMusic" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 1637.0
 offset_top = 621.0
 offset_right = 1662.0
