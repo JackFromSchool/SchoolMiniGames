@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c67waxlpvxl7l"
-path="res://.godot/imported/CustomYellow.png-a64fc3d886d6d074942de12cda0da52f.ctex"
+uid="uid://cf2saxxiwuuh4"
+path="res://.godot/imported/person_placeholder.png-52a77d8d7e844cb5afa1b2be0c2b1d9e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/CustomYellow.png"
-dest_files=["res://.godot/imported/CustomYellow.png-a64fc3d886d6d074942de12cda0da52f.ctex"]
+source_file="res://assets/placeholders/person_placeholder.png"
+dest_files=["res://.godot/imported/person_placeholder.png-52a77d8d7e844cb5afa1b2be0c2b1d9e.ctex"]
 
 [params]
 

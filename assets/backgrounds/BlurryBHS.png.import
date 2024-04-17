@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://21beokps8c56"
-path="res://.godot/imported/PurpleCircle.png-be2290558624b314453cce7fd3396c8b.ctex"
+uid="uid://bl683wytdgvp"
+path="res://.godot/imported/BlurryBHS.png-5aaf4e82da34b5322bfaf4652e75592d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/PurpleCircle.png"
-dest_files=["res://.godot/imported/PurpleCircle.png-be2290558624b314453cce7fd3396c8b.ctex"]
+source_file="res://assets/backgrounds/BlurryBHS.png"
+dest_files=["res://.godot/imported/BlurryBHS.png-5aaf4e82da34b5322bfaf4652e75592d.ctex"]
 
 [params]
 

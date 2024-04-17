@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfhl28lv25tkn"
-path="res://.godot/imported/CustomPurple.png-e41914305aeae4f180ecc2aaf9ae213d.ctex"
+uid="uid://v7j0gjduggbs"
+path="res://.godot/imported/person_placeholder_alt.png-a22d554996d8d4199b608f17b4a5bef5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/CustomPurple.png"
-dest_files=["res://.godot/imported/CustomPurple.png-e41914305aeae4f180ecc2aaf9ae213d.ctex"]
+source_file="res://assets/placeholders/person_placeholder_alt.png"
+dest_files=["res://.godot/imported/person_placeholder_alt.png-a22d554996d8d4199b608f17b4a5bef5.ctex"]
 
 [params]
 

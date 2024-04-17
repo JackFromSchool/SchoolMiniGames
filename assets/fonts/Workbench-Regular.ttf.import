@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bsicmw0jgh2et"
-path="res://.godot/imported/Workbench-Regular.ttf-2f86bcefa4bb415a72f6f3948f6c1e47.fontdata"
+path="res://.godot/imported/Workbench-Regular.ttf-c8b75d0b2d438e758c5079d77b242bc6.fontdata"
 
 [deps]
 
-source_file="res://assets/Workbench-Regular.ttf"
-dest_files=["res://.godot/imported/Workbench-Regular.ttf-2f86bcefa4bb415a72f6f3948f6c1e47.fontdata"]
+source_file="res://assets/fonts/Workbench-Regular.ttf"
+dest_files=["res://.godot/imported/Workbench-Regular.ttf-c8b75d0b2d438e758c5079d77b242bc6.fontdata"]
 
 [params]
 

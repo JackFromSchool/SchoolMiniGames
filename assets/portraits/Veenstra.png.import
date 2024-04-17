@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1biueh4o8ytv"
-path="res://.godot/imported/Schoolware main menu.png-1b81c9c7b40e2be573c8586dd06f3a74.ctex"
+uid="uid://dp4itimcww36q"
+path="res://.godot/imported/Veenstra.png-daae6b615aeb2a4ae37ba78327ebd075.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Schoolware main menu.png"
-dest_files=["res://.godot/imported/Schoolware main menu.png-1b81c9c7b40e2be573c8586dd06f3a74.ctex"]
+source_file="res://assets/portraits/Veenstra.png"
+dest_files=["res://.godot/imported/Veenstra.png-daae6b615aeb2a4ae37ba78327ebd075.ctex"]
 
 [params]
 

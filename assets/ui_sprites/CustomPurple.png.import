@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bitbtg1uup4mk"
-path="res://.godot/imported/Load.png-2dd881e43993bcccdc9bd9a55e980699.ctex"
+uid="uid://dfhl28lv25tkn"
+path="res://.godot/imported/CustomPurple.png-8fbc388b4300573b8e01f7373d897a6c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Load.png"
-dest_files=["res://.godot/imported/Load.png-2dd881e43993bcccdc9bd9a55e980699.ctex"]
+source_file="res://assets/ui_sprites/CustomPurple.png"
+dest_files=["res://.godot/imported/CustomPurple.png-8fbc388b4300573b8e01f7373d897a6c.ctex"]
 
 [params]
 

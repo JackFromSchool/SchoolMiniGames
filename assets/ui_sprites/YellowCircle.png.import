@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b05re6on1ds2j"
-path="res://.godot/imported/Hovering.png-46aa0ea032f114ff4fd3ec524c70086b.ctex"
+uid="uid://ppqb74fv2i1v"
+path="res://.godot/imported/YellowCircle.png-20a53005f292afeae18600093e6417b0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Hovering.png"
-dest_files=["res://.godot/imported/Hovering.png-46aa0ea032f114ff4fd3ec524c70086b.ctex"]
+source_file="res://assets/ui_sprites/YellowCircle.png"
+dest_files=["res://.godot/imported/YellowCircle.png-20a53005f292afeae18600093e6417b0.ctex"]
 
 [params]
 

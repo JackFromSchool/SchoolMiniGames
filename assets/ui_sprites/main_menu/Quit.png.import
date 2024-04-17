@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dp4itimcww36q"
-path="res://.godot/imported/Veenstra.png-fbb677f2b29db6ff253246c6e4f9c186.ctex"
+uid="uid://vo4atx6vm0sy"
+path="res://.godot/imported/Quit.png-f5ea0f5b0c4a5077dc4504e47d69edee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Veenstra.png"
-dest_files=["res://.godot/imported/Veenstra.png-fbb677f2b29db6ff253246c6e4f9c186.ctex"]
+source_file="res://assets/ui_sprites/main_menu/Quit.png"
+dest_files=["res://.godot/imported/Quit.png-f5ea0f5b0c4a5077dc4504e47d69edee.ctex"]
 
 [params]
 

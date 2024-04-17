@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vo4atx6vm0sy"
-path="res://.godot/imported/Quit.png-4c889a7d21da70a153608aab5dc6b2d5.ctex"
+uid="uid://21beokps8c56"
+path="res://.godot/imported/PurpleCircle.png-1e1bcde828120b708c4bfa10aa263a22.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Quit.png"
-dest_files=["res://.godot/imported/Quit.png-4c889a7d21da70a153608aab5dc6b2d5.ctex"]
+source_file="res://assets/ui_sprites/PurpleCircle.png"
+dest_files=["res://.godot/imported/PurpleCircle.png-1e1bcde828120b708c4bfa10aa263a22.ctex"]
 
 [params]
 

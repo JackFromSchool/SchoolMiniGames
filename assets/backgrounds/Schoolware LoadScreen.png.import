@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://usu1dae522e8"
-path="res://.godot/imported/Pressed.png-8ee6e1127405c946c685ca7285cfa223.ctex"
+uid="uid://drvxnjy4uxyjv"
+path="res://.godot/imported/Schoolware LoadScreen.png-ac5f20e76b24b10b9641f433d98d9cfa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pressed.png"
-dest_files=["res://.godot/imported/Pressed.png-8ee6e1127405c946c685ca7285cfa223.ctex"]
+source_file="res://assets/backgrounds/Schoolware LoadScreen.png"
+dest_files=["res://.godot/imported/Schoolware LoadScreen.png-ac5f20e76b24b10b9641f433d98d9cfa.ctex"]
 
 [params]
 

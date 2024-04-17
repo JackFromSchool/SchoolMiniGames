@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qng6k3vxd7fl"
-path="res://.godot/imported/Start.png-32059e95b8f435b776d2ab2896f429ad.ctex"
+uid="uid://bkunbc2m1bruy"
+path="res://.godot/imported/mr_smith_portrait.png-298c8576f0e03787c8eb1f3ecedb2fbb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Start.png"
-dest_files=["res://.godot/imported/Start.png-32059e95b8f435b776d2ab2896f429ad.ctex"]
+source_file="res://assets/portraits/mr_smith_portrait.png"
+dest_files=["res://.godot/imported/mr_smith_portrait.png-298c8576f0e03787c8eb1f3ecedb2fbb.ctex"]
 
 [params]
 

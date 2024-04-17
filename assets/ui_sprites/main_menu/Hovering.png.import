@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cf2saxxiwuuh4"
-path="res://.godot/imported/person_placeholder.png-25b1a3ab9963a4f3611eef8876b9b4d6.ctex"
+uid="uid://b05re6on1ds2j"
+path="res://.godot/imported/Hovering.png-5700e90412f3f2299a3c006c2053d8cd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/person_placeholder.png"
-dest_files=["res://.godot/imported/person_placeholder.png-25b1a3ab9963a4f3611eef8876b9b4d6.ctex"]
+source_file="res://assets/ui_sprites/main_menu/Hovering.png"
+dest_files=["res://.godot/imported/Hovering.png-5700e90412f3f2299a3c006c2053d8cd.ctex"]
 
 [params]
 

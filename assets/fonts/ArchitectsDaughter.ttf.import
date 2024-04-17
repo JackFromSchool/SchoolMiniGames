@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://c3hoit785q0ok"
-path="res://.godot/imported/ShareTechMono-Regular.ttf-1d4c0bf896be15d98321a55a08b8fc07.fontdata"
+uid="uid://c5pl3h7nd7d4f"
+path="res://.godot/imported/ArchitectsDaughter.ttf-0048c0f9569e6c7aab054996175b2cb9.fontdata"
 
 [deps]
 
-source_file="res://assets/ShareTechMono-Regular.ttf"
-dest_files=["res://.godot/imported/ShareTechMono-Regular.ttf-1d4c0bf896be15d98321a55a08b8fc07.fontdata"]
+source_file="res://assets/fonts/ArchitectsDaughter.ttf"
+dest_files=["res://.godot/imported/ArchitectsDaughter.ttf-0048c0f9569e6c7aab054996175b2cb9.fontdata"]
 
 [params]
 
