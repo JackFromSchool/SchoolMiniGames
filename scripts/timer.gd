@@ -2,9 +2,6 @@ extends Node2D
 
 signal done
 
-func _ready():
-	start(5.0)
-
 func start(time: float):
 	$Explosion.visible = false
 	$PencilSharpener.visible = true
