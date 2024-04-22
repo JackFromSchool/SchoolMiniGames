@@ -92,6 +92,7 @@ texture = ExtResource("2_d7wov")
 z_index = -1
 material = SubResource("CanvasItemMaterial_natkn")
 position = Vector2(-15, 10)
+emitting = false
 amount = 10
 process_material = SubResource("ParticleProcessMaterial_u2526")
 texture = ExtResource("3_doq4c")
