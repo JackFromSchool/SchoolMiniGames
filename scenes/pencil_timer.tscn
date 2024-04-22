@@ -1,0 +1,125 @@
+[gd_scene load_steps=17 format=3 uid="uid://c88l5oq0f33dr"]
+
+[ext_resource type="Script" path="res://scripts/timer.gd" id="1_a7unb"]
+[ext_resource type="Texture2D" uid="uid://b34eg88jnw1yk" path="res://assets/sprites/timer/pencil_sharpener.png" id="2_d7wov"]
+[ext_resource type="Texture2D" uid="uid://e8wlodkq4b7t" path="res://assets/sprites/timer/pencil_shavings_spritesheet.png" id="3_doq4c"]
+[ext_resource type="Texture2D" uid="uid://c88fpx6k3qtog" path="res://assets/sprites/timer/Untitled.png" id="4_i1ykt"]
+[ext_resource type="Texture2D" uid="uid://b2fxr516nyhv6" path="res://assets/sprites/timer/explosion_spritesheet.png" id="5_6e7nn"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_natkn"]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id="Gradient_r0rhl"]
+colors = PackedColorArray(1, 1, 1, 0.556863, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_i572d"]
+gradient = SubResource("Gradient_r0rhl")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_u2526"]
+particle_flag_disable_z = true
+inherit_velocity_ratio = 0.562
+direction = Vector3(-100, -100, 0)
+initial_velocity_min = 89.89
+initial_velocity_max = 168.55
+angular_velocity_max = 56.62
+gravity = Vector3(0, 500, 0)
+scale_min = 2.0
+scale_max = 2.0
+color_ramp = SubResource("GradientTexture1D_i572d")
+anim_offset_max = 1.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yq843"]
+atlas = ExtResource("5_6e7nn")
+region = Rect2(0, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2lfwl"]
+atlas = ExtResource("5_6e7nn")
+region = Rect2(200, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7e3p3"]
+atlas = ExtResource("5_6e7nn")
+region = Rect2(400, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yuyyb"]
+atlas = ExtResource("5_6e7nn")
+region = Rect2(600, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_luhny"]
+atlas = ExtResource("5_6e7nn")
+region = Rect2(800, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_io80t"]
+atlas = ExtResource("5_6e7nn")
+region = Rect2(1000, 0, 200, 200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ev565"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yq843")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2lfwl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7e3p3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yuyyb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_luhny")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_io80t")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="PencilTimer" type="Node2D"]
+script = ExtResource("1_a7unb")
+
+[node name="PencilSharpener" type="Sprite2D" parent="."]
+position = Vector2(1839, 90)
+texture = ExtResource("2_d7wov")
+
+[node name="ShavingParticles" type="GPUParticles2D" parent="PencilSharpener"]
+z_index = -1
+material = SubResource("CanvasItemMaterial_natkn")
+position = Vector2(-15, 10)
+amount = 10
+process_material = SubResource("ParticleProcessMaterial_u2526")
+texture = ExtResource("3_doq4c")
+lifetime = 5.0
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Box" type="Control" parent="."]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1759.0
+offset_top = 164.0
+offset_right = 1918.0
+offset_bottom = 1104.0
+
+[node name="Pencil" type="Sprite2D" parent="Box"]
+z_index = -1
+position = Vector2(82, 450)
+texture = ExtResource("4_i1ykt")
+
+[node name="Explosion" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(1826, 92)
+sprite_frames = SubResource("SpriteFrames_ev565")
+autoplay = "default"
+frame = 4
+frame_progress = 0.499599
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

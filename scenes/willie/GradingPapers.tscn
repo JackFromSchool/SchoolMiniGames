@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://deubw0s17fx8n"]
+
+[ext_resource type="Script" path="res://scripts/willie/GradingPapers.gd" id="1_figxe"]
+
+[node name="GradingPapers" type="Node"]
+script = ExtResource("1_figxe")
