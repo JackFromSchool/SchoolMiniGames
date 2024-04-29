@@ -1,6 +1,6 @@
 extends Area2D
 
-signal touch
+signal gameover(win: bool)
 @export var speed = 1000 # How fast the player will move (pixels/sec).
 var screen_size # Size of the game window.
 
@@ -30,6 +30,6 @@ func _process(delta):
 
 func _on_body_entered(body):
 	speed = 0
-	touch.emit()
+	gameover.emit(true)
 	print("fafasdas")
 	

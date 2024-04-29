@@ -5,7 +5,7 @@ func _ready():
 	start(1.0)
 	
 func start(speed_modifier: float):
-	var game_time = 5
+	var game_time = 4
 	get_node("PencilTimer").start(game_time)
 	
 
