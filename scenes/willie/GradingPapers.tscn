@@ -1,16 +1,47 @@
-[gd_scene load_steps=4 format=3 uid="uid://deubw0s17fx8n"]
+[gd_scene load_steps=5 format=3 uid="uid://deubw0s17fx8n"]
 
 [ext_resource type="Script" path="res://scripts/willie/GradingPapers.gd" id="1_figxe"]
 [ext_resource type="Texture2D" uid="uid://dfrw3vf4r5e7j" path="res://assets/backgrounds/willie/grading_papers.png" id="2_ydr3k"]
 [ext_resource type="PackedScene" uid="uid://c88l5oq0f33dr" path="res://scenes/pencil_timer.tscn" id="3_gy3so"]
+[ext_resource type="Texture2D" uid="uid://dp4itimcww36q" path="res://assets/portraits/Veenstra.png" id="4_ffjek"]
 
 [node name="GradingPapers" type="Node"]
 script = ExtResource("1_figxe")
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(956.333, 541.5)
-scale = Vector2(1.66204, 1.66204)
 texture = ExtResource("2_ydr3k")
 
 [node name="PencilTimer" parent="." instance=ExtResource("3_gy3so")]
-z_index = 1
+z_index = 2
+
+[node name="PaperSpawn" type="Marker2D" parent="."]
+position = Vector2(934, 591)
+
+[node name="FailSpot" type="Marker2D" parent="."]
+position = Vector2(421, 592)
+
+[node name="PassSpot" type="Marker2D" parent="."]
+position = Vector2(1418, 602)
+
+[node name="Lose" type="Control" parent="."]
+visible = false
+z_index = 11
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Veenstra" type="Sprite2D" parent="Lose"]
+position = Vector2(955, 494)
+scale = Vector2(0.532, 0.532)
+texture = ExtResource("4_ffjek")
+
+[node name="Text" type="Label" parent="Lose"]
+offset_left = 537.0
+offset_top = 766.0
+offset_right = 1259.0
+offset_bottom = 903.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "Wrong Grade!!!"
+
+[connection signal="done" from="PencilTimer" to="." method="_on_pencil_timer_done"]
