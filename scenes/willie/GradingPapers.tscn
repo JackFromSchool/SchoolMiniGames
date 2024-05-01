@@ -36,6 +36,7 @@ scale = Vector2(0.532, 0.532)
 texture = ExtResource("4_ffjek")
 
 [node name="Text" type="Label" parent="Lose"]
+layout_mode = 0
 offset_left = 537.0
 offset_top = 766.0
 offset_right = 1259.0

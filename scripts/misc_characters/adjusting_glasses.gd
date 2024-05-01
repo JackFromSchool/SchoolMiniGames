@@ -1,11 +1,12 @@
 extends Minigame
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	get_node("Area2D").set_monitoring(true)
+	start(1.0)
+	
+func start(speed_modifier: float):
+	var game_time = 4
+	get_node("PencilTimer").start(game_time)
+	
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass

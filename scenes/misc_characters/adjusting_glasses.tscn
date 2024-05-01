@@ -1,6 +1,50 @@
-[gd_scene load_steps=2 format=3 uid="uid://vhwdhro21y2l"]
+[gd_scene load_steps=8 format=3 uid="uid://vhwdhro21y2l"]
 
 [ext_resource type="Script" path="res://scripts/misc_characters/adjusting_glasses.gd" id="1_b4nv8"]
+[ext_resource type="Texture2D" uid="uid://bd7fba8spn1mw" path="res://assets/ui_sprites/misc_characters/Face.png" id="2_v8dth"]
+[ext_resource type="Texture2D" uid="uid://b27weg4d54ycx" path="res://assets/ui_sprites/misc_characters/Glasses.png" id="3_fwdxx"]
+[ext_resource type="Script" path="res://scenes/misc_characters/Sprite2D.gd" id="4_o1wfb"]
+[ext_resource type="PackedScene" uid="uid://d4lrwsi1trutc" path="res://scenes/pencil_timer.tscn" id="5_0707e"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0xdh2"]
+radius = 7.01572
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_003el"]
+radius = 8.41847
 
 [node name="AdjustingGlasses" type="Node"]
 script = ExtResource("1_b4nv8")
+
+[node name="Face Background" type="Sprite2D" parent="."]
+position = Vector2(962.5, 543.5)
+scale = Vector2(20.1029, 11.2954)
+texture = ExtResource("2_v8dth")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(584, 948)
+scale = Vector2(1.88, 1.92)
+script = ExtResource("4_o1wfb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(3.05176e-05, 0)
+scale = Vector2(1.42537, 1.42318)
+shape = SubResource("CircleShape2D_0xdh2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(-0.531891, -15.1041)
+scale = Vector2(7.85681, 3.82487)
+texture = ExtResource("3_fwdxx")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(938, 308)
+gravity_scale = 0.0
+
+[node name="touchpoint" type="CollisionShape2D" parent="RigidBody2D"]
+scale = Vector2(1.07999, 1)
+shape = SubResource("CircleShape2D_003el")
+
+[node name="PencilTimer" parent="." instance=ExtResource("5_0707e")]
+z_index = 4
+position = Vector2(-3, 9)
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
