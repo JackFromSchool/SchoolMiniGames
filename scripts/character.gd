@@ -38,7 +38,7 @@ func start():
 	game_i.name = "Current"
 	game_i.gameover.connect(_on_gameover)
 	add_child(game_i)
-	game_i.start(1.0/(1+speedIncrement*(gamesPlayed%gamesToSpeedUp)))
+	game_i.start(1.0)
 
 func _on_gameover(win: bool):
 	game_i.queue_free()
