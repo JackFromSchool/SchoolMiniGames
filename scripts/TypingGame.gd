@@ -11,8 +11,7 @@ func _ready():
 
 func start(speed_modifier: float):
 	var game_time = text.length()*(speed_modifier)*.75
-	print("game time:")
-	print(game_time)
+	
 	get_node("PencilTimer").done.connect(_on_done)
 	get_node("PencilTimer").start(game_time)
 	
