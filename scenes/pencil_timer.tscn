@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cj02vu3serq4d"]
+[gd_scene load_steps=17 format=3 uid="uid://d4lrwsi1trutc"]
 
 [ext_resource type="Script" path="res://scripts/timer.gd" id="1_a7unb"]
 [ext_resource type="Texture2D" uid="uid://b34eg88jnw1yk" path="res://assets/sprites/timer/pencil_sharpener.png" id="2_d7wov"]

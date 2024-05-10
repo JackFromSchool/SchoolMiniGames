@@ -27,9 +27,8 @@ func _process(delta):
 	#position = position.clamp(Vector2.ZERO, screen_size)
 
 
-
 func _on_body_entered(body):
 	speed = 0
-	gameover.emit(true)
+	get_parent().overgame()
 	print("fafasdas")
 	
