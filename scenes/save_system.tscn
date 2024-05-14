@@ -4,3 +4,4 @@
 
 [node name="SaveSystem" type="Node"]
 script = ExtResource("1_ddfqa")
+character_list = ["WatsonAndGarcia"]

@@ -18,14 +18,18 @@ var speedIncrement: float
 # Number of games that must be played before a speed increase. Default speed modifier is one.
 var gamesToSpeedUp: int
 
-
 var lives: int
 var gamesPlayed: int
 var speedIncrementCount: int
 var game_i
 var boss_i
 
+var MetCharacter = false
+var Encounters = {}
+
 func start():
+	MetCharacter = true
+	get_parent().get_parent().get_node("SaveSystem").save_current_game()
 	lives = 4
 	gamesPlayed = 0
 	gamesToSpeedUp = 3
@@ -34,6 +38,10 @@ func start():
 	speedIncrementCount = 0
 	
 	var game = games.pick_random()
+	
+	Encounters[game.get_name()] = true
+	get_parent().get_parent().get_node("SaveSystem").save_current_game()
+	
 	game_i = game.instantiate()
 	game_i.name = "Current"
 	game_i.gameover.connect(_on_gameover)
@@ -73,3 +81,7 @@ func _on_boss_gameover(win: bool):
 	boss_i.queue_free()
 	
 	done.emit(win)
+	
+func load_state(game_state):
+	MetCharacter = game_state[MetCharacter]
+	Encounters = game_state[Encounters]

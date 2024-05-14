@@ -80,6 +80,6 @@ offset_bottom = 40.0
 texture = ExtResource("9_2l1gy")
 stretch_mode = 2
 
-[connection signal="pressed" from="TextNew" to="." method="_on_text_start_pressed"]
+[connection signal="pressed" from="TextNew" to="." method="_on_text_new_pressed"]
 [connection signal="pressed" from="TextLoad" to="." method="_on_text_load_pressed"]
 [connection signal="pressed" from="TextQuit" to="." method="_on_text_quit_pressed"]

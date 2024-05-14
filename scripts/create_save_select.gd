@@ -1,6 +1,6 @@
 extends Control
 
-signal save_loaded
+signal save_created
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -11,7 +11,10 @@ func _process(delta):
 	pass
 
 func load_save(save_num: int):
-	save_loaded.emit(save_num)
+	if not get_parent().get_node("SaveSystem").new_save(save_num):
+		pass
+	else:
+		save_created.emit()
 
 func _on_save_1_button_pressed():
 	load_save(1)
