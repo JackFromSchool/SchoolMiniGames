@@ -1,6 +1,7 @@
 extends Control
 
 signal move_to_load_select
+signal move_to_save_creator
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -10,8 +11,8 @@ func _ready():
 func _process(delta):
 	pass
 
-func _on_text_start_pressed():
-	pass
+func _on_text_new_pressed():
+	move_to_save_creator.emit()
 
 func _on_text_load_pressed():
 	move_to_load_select.emit()

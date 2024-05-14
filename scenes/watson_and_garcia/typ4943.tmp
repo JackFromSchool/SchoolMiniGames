@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://ddyhdl0o5h52s"]
+
+[ext_resource type="Script" path="res://scripts/TypingGame.gd" id="1_ccvb4"]
+[ext_resource type="Texture2D" uid="uid://bsxgf44cv4eg0" path="res://assets/yowaimo.png" id="2_t1m1x"]
+[ext_resource type="FontFile" uid="uid://dab72xrxcy66n" path="res://assets/fonts/ADELIA.ttf" id="3_jd03j"]
+[ext_resource type="Theme" uid="uid://dgmupo6i6mfix" path="res://themes/DefaultTextTheme.tres" id="4_nlemc"]
+
+[node name="TypingGame" type="Node"]
+script = ExtResource("1_ccvb4")
+
+[node name="Background" type="TextureRect" parent="."]
+visible = false
+offset_left = 234.0
+offset_top = 103.0
+offset_right = 1770.0
+offset_bottom = 967.0
+texture = ExtResource("2_t1m1x")
+stretch_mode = 2
+
+[node name="TitleInstruction" type="RichTextLabel" parent="."]
+offset_left = 375.0
+offset_top = 36.0
+offset_right = 1596.0
+offset_bottom = 350.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 35
+theme_override_fonts/normal_font = ExtResource("3_jd03j")
+theme_override_font_sizes/normal_font_size = 100
+text = "TYPE FAST OR FACE CERTAIN DEMISE"
+
+[node name="UncompletedText" type="RichTextLabel" parent="."]
+offset_left = 134.0
+offset_top = 411.0
+offset_right = 1847.0
+offset_bottom = 793.0
+theme = ExtResource("4_nlemc")
+theme_override_colors/default_color = Color(0.643137, 0.635294, 0.231373, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "[color=GREEN]yes[color=RED]no"
+
+[node name="CompletedText" type="RichTextLabel" parent="."]
+visible = false
+z_index = -1
+offset_left = 134.0
+offset_top = 411.0
+offset_right = 1847.0
+offset_bottom = 793.0
+theme = ExtResource("4_nlemc")
+theme_override_colors/default_color = Color(0, 0.729412, 0.443137, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/normal_font_size = 50

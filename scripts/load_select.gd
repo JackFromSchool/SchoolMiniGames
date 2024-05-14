@@ -11,10 +11,7 @@ func _process(delta):
 	pass
 
 func load_save(save_num: int):
-	if not get_parent().get_node("SaveSystem").load_game(save_num):
-		pass
-	else:
-		save_loaded.emit()
+	save_loaded.emit(save_num)
 
 func _on_save_1_button_pressed():
 	load_save(1)

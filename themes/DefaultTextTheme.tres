@@ -1,0 +1,10 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dgmupo6i6mfix"]
+
+[ext_resource type="FontFile" uid="uid://dab72xrxcy66n" path="res://assets/fonts/ADELIA.ttf" id="1_vssvb"]
+
+[resource]
+default_font = ExtResource("1_vssvb")
+Label/colors/font_color = Color(0.819608, 0.32549, 0.290196, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+RichTextLabel/colors/default_color = Color(1, 1, 1, 1)
+RichTextLabel/colors/font_outline_color = Color(0, 0, 0, 1)

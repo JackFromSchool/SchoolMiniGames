@@ -6,7 +6,7 @@ func start(time: float):
 	$Explosion.visible = false
 	$PencilSharpener.visible = true
 	$Timer.wait_time = time
-	$Timer.start()
+	$Timer.start(time)
 	
 	$PencilSharpener/ShavingParticles.emitting = true
 

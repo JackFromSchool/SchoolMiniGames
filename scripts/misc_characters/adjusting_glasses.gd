@@ -6,7 +6,11 @@ func _ready():
 	
 func start(speed_modifier: float):
 	var game_time = 4
-	get_node("PencilTimer").start(game_time)
+	get_node("PencilTimer").start(game_time * speed_modifier)
+	get_node("PencilTimer").done.connect(_on_done)
 	
-
-
+func _on_done():
+	gameover.emit(false)
+	
+func overgame():
+	gameover.emit(true)
