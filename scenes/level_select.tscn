@@ -106,4 +106,3 @@ rotation = -3.13329
 [connection signal="pressed" from="ToStudent" to="." method="_on_to_student_pressed"]
 [connection signal="pressed" from="ToCompSci" to="." method="_on_to_comp_sci_pressed"]
 [connection signal="pressed" from="ToMusic" to="." method="_on_to_music_pressed"]
-[connection signal="pressed" from="ToMusic" to="." method="_on_to_calculus_pressed"]

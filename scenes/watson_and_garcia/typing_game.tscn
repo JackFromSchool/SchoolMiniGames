@@ -1,10 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://ddyhdl0o5h52s"]
+[gd_scene load_steps=13 format=3 uid="uid://botxsi4lgxj86"]
 
 [ext_resource type="Script" path="res://scripts/TypingGame.gd" id="1_ccvb4"]
 [ext_resource type="Texture2D" uid="uid://bvtfyf633kvnt" path="res://assets/backgrounds/computer_screen.png" id="2_tgf5e"]
 [ext_resource type="FontFile" uid="uid://dab72xrxcy66n" path="res://assets/fonts/ADELIA.ttf" id="3_jd03j"]
 [ext_resource type="Theme" uid="uid://dgmupo6i6mfix" path="res://themes/DefaultTextTheme.tres" id="4_nlemc"]
-[ext_resource type="PackedScene" uid="uid://cj02vu3serq4d" path="res://scenes/pencil_timer.tscn" id="5_51hud"]
+[ext_resource type="PackedScene" path="res://scenes/pencil_timer.tscn" id="5_51hud"]
 [ext_resource type="AudioStream" uid="uid://bg3ovso7q2cx3" path="res://assets/blip_sounds/blip1.wav" id="6_b700c"]
 [ext_resource type="AudioStream" uid="uid://bonsut1eymhj8" path="res://assets/blip_sounds/blip2.wav" id="7_5yso1"]
 [ext_resource type="AudioStream" uid="uid://w8jgh2gvysew" path="res://assets/blip_sounds/blip3.wav" id="8_yiogj"]

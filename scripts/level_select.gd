@@ -7,8 +7,6 @@ signal misc_characters_start
 
 func _on_to_calculus_pressed():
 	willie_start.emit()
-	while $Path2D/William.progress_ratio < 1 :
-		$Path2D/William.progress_ratio += .001
 
 func _on_to_student_pressed():
 	misc_characters_start.emit()

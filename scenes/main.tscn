@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://uc3jtdh5wt0k"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_hg13q"]
-[ext_resource type="PackedScene" uid="uid://bwkb853l53gdu" path="res://scenes/save_system.tscn" id="2_jtd0q"]
+[ext_resource type="PackedScene" path="res://scenes/save_system.tscn" id="2_jtd0q"]
 [ext_resource type="PackedScene" uid="uid://rfc002x5y8th" path="res://scenes/marquart/marquart.tscn" id="3_nspem"]
 [ext_resource type="PackedScene" uid="uid://d0puqb5rvfdos" path="res://scenes/misc_characters/misc_characters.tscn" id="4_50qlp"]
 [ext_resource type="PackedScene" uid="uid://dwi8m06hnaad7" path="res://scenes/watson_and_garcia/watson_and_garcia.tscn" id="5_achm3"]

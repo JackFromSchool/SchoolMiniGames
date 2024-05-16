@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://bs062lmdpw6j2"]
+
+[ext_resource type="Script" path="res://scripts/marquart/RepairingInstrument.gd" id="1_qnpl5"]
+[ext_resource type="Texture2D" uid="uid://iwd0gtwc77vl" path="res://assets/sprites/Trumpet.png" id="2_103vh"]
+[ext_resource type="Texture2D" uid="uid://ctnsv5s4e306m" path="res://assets/sprites/TrumpetValve.png" id="3_71cdg"]
+[ext_resource type="Script" path="res://scenes/marquart/CharacterBody2D.gd" id="3_th3vb"]
+[ext_resource type="Script" path="res://scenes/marquart/Valve.gd" id="5_j3uhc"]
+[ext_resource type="Script" path="res://scenes/marquart/Valve2.gd" id="5_r1kc7"]
+[ext_resource type="Script" path="res://scenes/marquart/Valve3.gd" id="7_crack"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_8vry4"]
+
+[node name="RepairingInstrument" type="Node"]
+script = ExtResource("1_qnpl5")
+
+[node name="Trumpet" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(960, 540)
+texture = ExtResource("2_103vh")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+visible = false
+script = ExtResource("3_th3vb")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D"]
+polygon = PackedVector2Array(268, 712, 344, 712, 347, 930, 263, 931)
+
+[node name="Valve" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(307, 821)
+scale = Vector2(0.447449, 0.447449)
+texture = ExtResource("3_71cdg")
+script = ExtResource("5_j3uhc")
+
+[node name="Valve2" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(1016, 234)
+scale = Vector2(0.447449, 0.447449)
+texture = ExtResource("3_71cdg")
+script = ExtResource("5_r1kc7")
+
+[node name="Valve3" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(1805, 774)
+scale = Vector2(0.447449, 0.447449)
+texture = ExtResource("3_71cdg")
+script = ExtResource("7_crack")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+modulate = Color(0, 0, 0, 1)
+offset_right = 1968.0
+offset_bottom = 1133.0
+texture = SubResource("CanvasTexture_8vry4")
+expand_mode = 2
+
+[connection signal="input_event" from="CharacterBody2D" to="CharacterBody2D" method="_on_input_event"]
+[connection signal="mouse_entered" from="CharacterBody2D" to="CharacterBody2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CharacterBody2D" to="." method="_on_character_body_2d_mouse_exited"]

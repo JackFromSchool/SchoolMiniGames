@@ -1,7 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://rfc002x5y8th"]
+[gd_scene load_steps=3 format=3 uid="uid://rfc002x5y8th"]
 
 [ext_resource type="PackedScene" uid="uid://tfndj5ry4teq" path="res://scenes/character.tscn" id="1_136iv"]
+[ext_resource type="PackedScene" uid="uid://cl5ox54rmmaug" path="res://scenes/marquart/RepairingInstrument.tscn" id="2_ue6dr"]
 
 [node name="Marquart" type="Node"]
 
 [node name="Character" parent="." instance=ExtResource("1_136iv")]
+games = Array[PackedScene]([ExtResource("2_ue6dr")])
